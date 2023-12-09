@@ -20,6 +20,16 @@ class EmpleadoController extends Controller
 
     public function store(Request $request)
     {
-        // Lógica para almacenar un nuevo producto
+        {
+            $empleado= new Empleado();
+            $empleado->producto = $request->input("idproducto");
+            $empleado->nombre = $request->input("nombre");
+            $empleado->apellido = $request->input("fechaRegistro");
+            $empleado->telefono = $request->input("telefono");
+            $empleado->password = $request->input("correo");
+            $empleado->save();
+            
+            return redirect('producto.inicio');
+        }
     }
 }

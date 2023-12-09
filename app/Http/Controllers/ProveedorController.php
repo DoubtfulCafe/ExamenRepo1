@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\producto;
+use App\Models\Proveedor;
 
-class productoController extends Controller
+class ProveedorController extends Controller
 {
     public function index()
     {
-        $productoes1 = producto::all();
-        return view('provedores', compact('productoes1'));
+        $Proveedores1 = Proveedor::all();
+        return view('provedores', compact('Proveedores1'));
     }
 
     public function create()
@@ -20,13 +20,13 @@ class productoController extends Controller
 
     public function store(Request $request)
     {
-        $producto= new producto();
-        $producto->producto = $request->input("idproducto");
-        $producto->nombre = $request->input("nombre");
-        $producto->apellido = $request->input("fechaRegistro");
-        $producto->telefono = $request->input("telefono");
-        $producto->password = $request->input("correo");
-        $producto->save();
+        $proveedor= new Proveedor();
+        $proveedor->producto = $request->input("idproducto");
+        $proveedor->nombre = $request->input("nombre");
+        $proveedor->apellido = $request->input("fechaRegistro");
+        $proveedor->telefono = $request->input("telefono");
+        $proveedor->password = $request->input("correo");
+        $proveedor->save();
         
         return redirect('producto.inicio');
     }

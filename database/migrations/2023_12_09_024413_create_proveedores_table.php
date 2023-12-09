@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('productoes', function (Blueprint $table) {
-            $table->integer('idproducto')->primarykey(); 
+        Schema::create('proveedores', function (Blueprint $table) {
+            $table->integer('idproveedor')->primarykey(); 
             $table->string('nombre'); 
             $table->date('fechaRegistro'); 
             $table->string('telefono'); 
