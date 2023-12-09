@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('nombre'); 
             $table->date('fechaRegistro'); 
             $table->string('telefono'); 
-            $table->string('correo'); 
-            $table->timestamps(); 
+            $table->string('correo');  
         });
     }
 
