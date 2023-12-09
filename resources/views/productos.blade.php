@@ -7,5 +7,8 @@
 </head>
 <body>
     <h1>Productos</h1>
+
+    {{$productos1}}
+    
 </body>
 </html>

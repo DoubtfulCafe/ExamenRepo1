@@ -7,5 +7,7 @@
 </head>
 <body>
     <h1>proveedores</h1>
+
+    {{$proveedores1}}
 </body>
 </html>
