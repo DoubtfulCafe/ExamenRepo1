@@ -21,11 +21,10 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         $producto= new Producto();
-        $producto->producto = $request->input("idproducto");
-        $producto->nombre = $request->input("nombre");
-        $producto->apellido = $request->input("fechaRegistro");
-        $producto->telefono = $request->input("telefono");
-        $producto->password = $request->input("correo");
+        $producto->descripcion = $request->input("descripcion");
+        $producto->precio = $request->input("precio");
+        $producto->stock = $request->input("stock");
+        $producto->pagaIsv = $request->input("pagaIsv");
         $producto->save();
         
         return redirect('producto.inicio');

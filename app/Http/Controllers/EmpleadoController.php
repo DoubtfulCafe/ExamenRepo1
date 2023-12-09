@@ -22,11 +22,11 @@ class EmpleadoController extends Controller
     {
         {
             $empleado= new Empleado();
-            $empleado->producto = $request->input("idproducto");
+            $empleado->idprestamo = $request->input("idprestamo");
             $empleado->nombre = $request->input("nombre");
-            $empleado->apellido = $request->input("fechaRegistro");
-            $empleado->telefono = $request->input("telefono");
-            $empleado->password = $request->input("correo");
+            $empleado->apellido = $request->input("apellido");
+            $empleado->fechaIgreso = $request->input("fechaIngreso");
+            $empleado->correo = $request->input("correo");
             $empleado->save();
             
             return redirect('producto.inicio');

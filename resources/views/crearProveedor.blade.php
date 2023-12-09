@@ -38,7 +38,7 @@
                 
 
                 <button type="submit" class="btn btn-success">Guardar</button>
-                <a class="btn btn-primary" href="{{ route('productoes.inicio') }}">Regresar</a>
+                <a class="btn btn-primary" href="{{ route('proveedores.inicio') }}">Regresar</a>
 
             </div>
 

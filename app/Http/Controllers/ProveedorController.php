@@ -21,13 +21,13 @@ class ProveedorController extends Controller
     public function store(Request $request)
     {
         $proveedor= new Proveedor();
-        $proveedor->producto = $request->input("idproducto");
+        $proveedor->idproveedor = $request->input("idproveedor");
         $proveedor->nombre = $request->input("nombre");
-        $proveedor->apellido = $request->input("fechaRegistro");
+        $proveedor->fechaRegistro = $request->input("fechaRegistro");
         $proveedor->telefono = $request->input("telefono");
-        $proveedor->password = $request->input("correo");
+        $proveedor->correo = $request->input("correo");
         $proveedor->save();
         
-        return redirect('producto.inicio');
+        return redirect('proveedor.inicio');
     }
 }
