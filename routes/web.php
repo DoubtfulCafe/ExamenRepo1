@@ -18,14 +18,14 @@ use App\Http\Controllers\ProveedorController;
 */
 
 
-Route::get('/productos', [ProductoController::class, 'index']);
-Route::get('/productos/create', [ProductoController::class, 'create']);
-Route::post('/productos', [ProductoController::class, 'store']);
+Route::get('/productos', [ProductoController::class, 'index'])->name('producto.inicio');
+Route::get('/productos/create', [ProductoController::class, 'create'])->name('producto.crear');
+Route::post('/productos', [ProductoController::class, 'store'])->name('producto.store');
 
-Route::get('/empleados', [EmpleadoController::class, 'index']);
-Route::get('/empleados/create', [EmpleadoController::class, 'create']);
-Route::post('/empleados', [EmpleadoController::class, 'store']);
+Route::get('/empleados', [EmpleadoController::class, 'index'])->name('empleado.inicio');
+Route::get('/empleados/create', [EmpleadoController::class, 'create'])->name('empleado.crear');
+Route::post('/empleados', [EmpleadoController::class, 'store'])->name('empleado.store');
 
-Route::get('/proveedores', [ProveedorController::class, 'index']);
-Route::get('/proveedores/create', [ProveedorController::class, 'create']);
-Route::post('/proveedores', [ProveedorController::class, 'store']);
+Route::get('/proveedores', [ProveedorController::class, 'index'])->name('proveedores.inicio');
+Route::get('/proveedores/create', [ProveedorController::class, 'create'])->name('proveedores.crear');
+Route::post('/proveedores', [ProveedorController::class, 'store'])->name('proveedores.store');
