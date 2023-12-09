@@ -20,6 +20,14 @@ class ProductoController extends Controller
 
     public function store(Request $request)
     {
-        // Lógica para almacenar un nuevo producto
+        $producto= new Producto();
+        $producto->producto = $request->input("idproducto");
+        $producto->nombre = $request->input("nombre");
+        $producto->apellido = $request->input("fechaRegistro");
+        $producto->telefono = $request->input("telefono");
+        $producto->password = $request->input("correo");
+        $producto->save();
+        
+        return redirect('producto.inicio');
     }
 }

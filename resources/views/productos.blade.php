@@ -12,7 +12,7 @@
 
     
     <div>
-        <a class="btn btn-primary" href="#">Crear Nuevo Usuario</a>
+        <a class="btn btn-primary" href="#">Crear Nuevo producto</a>
     </div>
 
 

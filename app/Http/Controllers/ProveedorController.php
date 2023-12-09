@@ -3,23 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Proveedor;
+use App\Models\producto;
 
-class ProveedorController extends Controller
+class productoController extends Controller
 {
     public function index()
     {
-        $proveedores1 = Proveedor::all();
-        return view('provedores', compact('proveedores1'));
+        $productoes1 = producto::all();
+        return view('provedores', compact('productoes1'));
     }
 
     public function create()
     {
-        return view('crearProveedor');
+        return view('crearproducto');
     }
 
     public function store(Request $request)
     {
-        // Lógica para almacenar un nuevo producto
+        $producto= new producto();
+        $producto->producto = $request->input("idproducto");
+        $producto->nombre = $request->input("nombre");
+        $producto->apellido = $request->input("fechaRegistro");
+        $producto->telefono = $request->input("telefono");
+        $producto->password = $request->input("correo");
+        $producto->save();
+        
+        return redirect('producto.inicio');
     }
 }

@@ -13,14 +13,14 @@
 
    
     <div>
-        <a class="btn btn-primary" href="#">Crear Nuevo Usuario</a>
+        <a class="btn btn-primary" href="#">Crear Nuevo producto</a>
     </div>
 
 
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">IdProveedoress</th>
+            <th scope="col">Idproductoess</th>
             <th scope="col">Nombre</th>
             <th scope="col">Fecha de Registro</th>
             <th scope="col">Telefonos</th>

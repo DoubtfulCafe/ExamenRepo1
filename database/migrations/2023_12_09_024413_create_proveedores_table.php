@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('proveedores', function (Blueprint $table) {
-            $table->integer('idproveedor')->primarykey(); 
+        Schema::create('productoes', function (Blueprint $table) {
+            $table->integer('idproducto')->primarykey(); 
             $table->string('nombre'); 
             $table->date('fechaRegistro'); 
             $table->string('telefono'); 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('proveedores');
+        Schema::dropIfExists('productoes');
     }
 };
