@@ -15,7 +15,7 @@ class EmpleadoController extends Controller
 
     public function create()
     {
-        return view('empleado.create');
+        return view('crearEmpleado');
     }
 
     public function store(Request $request)
