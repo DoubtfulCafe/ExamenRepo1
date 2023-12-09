@@ -9,10 +9,39 @@
 </head>
 <body>
     
-    <h1>ABC de usuarios</h1>
+    <h1>Empleados</h1>
 
-    {{$empleados1}}
-    
+   
+    <div>
+        <a class="btn btn-primary" href="#">Crear Nuevo Usuario</a>
+    </div>
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">IdProveedoress</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha de Registro</th>
+            <th scope="col">Telefonos</th>
+            <th scope="col">correos</th>
+           
+
+          </tr>
+        </thead>
+        <tbody>
+            @foreach ($empleados1 as $item)
+            <tr>
+                <th scope="row">{{$item->idPrestamo}}</th>
+                <td>{{$item->nombre}}</td>
+                <td>{{$item->apellido}}</td>
+                <td>{{$item->fechaIngreso}}</td>
+                <td>{{$item->salario}}</td>
+              </tr>
+            @endforeach
+          
+        </tbody>
+      </table>        
 
 </body>
 </html>
